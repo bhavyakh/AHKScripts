@@ -1,0 +1,9 @@
+int ans = 0;
+    for(int i = 0; i < n; i++)
+    {
+        int k;
+        if(numTasks[i]  batchSize[i]) k = ((numTasks[i]/batchSize[i]) + 1) * processingTime[i];
+        else k = (numTasks[i]/batchSize[i]) * processingTime[i];
+        if(k > ans) ans = k;
+    }
+    cout << ans;
